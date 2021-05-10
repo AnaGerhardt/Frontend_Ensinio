@@ -1,5 +1,5 @@
 import "./Intro.scss";
-import Imagem from "src/assets/images/pessoa-intro.svg";
+import PersonImage from "src/assets/images/person-intro.png";
 import { Video, Playlist, Transcription, Union } from "src/components/Icons";
 import certified from "src/components/Icons/icon-certified.svg";
 import { Languages } from "src/context/LanguageContext";
@@ -29,7 +29,7 @@ export function Intro({ items, language }: IProps) {
           </div>
         </div>
         <div className="intro-imagem">
-          <img src={Imagem} alt="" />
+          <img src={PersonImage} alt="" />
         </div>
       </div>
       <div className="intro-background" />
