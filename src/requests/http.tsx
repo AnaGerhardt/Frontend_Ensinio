@@ -1,8 +1,8 @@
 import axios, { AxiosRequestConfig, AxiosResponse, AxiosError } from "axios";
-import { SERVER, DEBUG } from "src/consts";
+const DEBUG = process.env.NODE_ENV === "development";
 
 const mainAxiosConfig: AxiosRequestConfig = {
-  baseURL: SERVER.MAIN_SERVICE,
+  baseURL: window.location.pathname,
   headers: {
     "Content-Type": "application/json",
   },
