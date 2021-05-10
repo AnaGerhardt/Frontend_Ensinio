@@ -2,7 +2,7 @@ import axios, { AxiosRequestConfig, AxiosResponse, AxiosError } from "axios";
 const DEBUG = process.env.NODE_ENV === "development";
 
 const mainAxiosConfig: AxiosRequestConfig = {
-  baseURL: process.env.REACT_APP_BASEURL,
+  baseURL: process.env.REACT_APP_REQUEST_BASEURL,
   headers: {
     "Content-Type": "application/json",
   },

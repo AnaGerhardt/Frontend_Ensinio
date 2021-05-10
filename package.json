@@ -9,9 +9,7 @@
     "@types/react-dom": "^17.0.3",
     "@types/react-router-dom": "^5.1.7",
     "axios": "^0.21.1",
-    "express": "^4.17.1",
     "node-sass": "^5.0.0",
-    "path": "^0.12.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
@@ -27,7 +25,6 @@
     "serverDev": "json-server --watch db.json --port 5000",
     "dev": "concurrently \"npm run startDev\" \"npm run serverDev\""
   },
-  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": [
       "react-app",
