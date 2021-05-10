@@ -1,8 +1,8 @@
-# Ensinio Front-end Challenge 2
+# Ensinio Front-end Challenge
 
-Projeto criado para o teste técnico da vaga de Front-end pleno da empresa Ensinio.
+Teste técnico realizado para a vaga de Front-end pleno da empresa Ensinio.
 
-## Como executar
+## Como executar o projeto
 
 No diretório do projeto, executar:
 
