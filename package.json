@@ -25,7 +25,7 @@
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build && mv -v build/ .. && cd .. && mv build public",
     "server": "json-server --watch db.json --port 5000",
     "dev": "concurrently \"npm run dev\" \"npm run server\"",
-    "start": "json-server --watch db.json --port 5000"
+    "start": "npx json-server --watch db.json --port 5000"
   },
   "eslintConfig": {
     "extends": [
