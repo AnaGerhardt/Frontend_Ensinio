@@ -25,6 +25,7 @@
 
   &-center {
     color: $text-color-light-opacity9;
+    justify-content: center;
   }
 
   &-right {
@@ -146,7 +147,7 @@
   .header {
     display: grid;
     gap: 2rem;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-columns: 0.5fr 2fr auto;
     padding: 0 5rem;
   }
   .header-hamburger {

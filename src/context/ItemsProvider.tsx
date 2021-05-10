@@ -8,7 +8,7 @@ export const ItemsProvider = (
   const [items, setItems] = useState<Items>();
   const request = async function buscarItens() {
     const req = await getItems();
-    if (req) setItems(req);
+    setItems(req);
   };
 
   useEffect(() => {
