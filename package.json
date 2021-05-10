@@ -19,13 +19,13 @@
     "typescript": "^4.2.4"
   },
   "scripts": {
-    "start": "react-scripts build",
+    "start": "node server.js",
+    "startDev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "serverDev": "json-server --watch db.json --port 5000",
-    "server": "node server.js",
-    "dev": "concurrently \"npm start\" \"npm run serverDev\""
+    "dev": "concurrently \"npm startDev\" \"npm run serverDev\""
   },
   "proxy": "http://localhost:8080",
   "eslintConfig": {
