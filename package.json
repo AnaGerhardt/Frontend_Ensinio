@@ -25,9 +25,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "serverDev": "json-server --watch db.json --port 5000",
-    "dev": "concurrently \"npm startDev\" \"npm run serverDev\""
+    "dev": "concurrently \"npm run startDev\" \"npm run serverDev\""
   },
-  "proxy": "http://localhost:8080",
+  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": [
       "react-app",

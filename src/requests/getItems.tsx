@@ -37,4 +37,4 @@ export async function getItems(): Promise<Items> {
   return req?.data;
 }
 
-getItems.url = "/data";
+getItems.url = "/api";
