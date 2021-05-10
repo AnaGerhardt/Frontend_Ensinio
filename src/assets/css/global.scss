@@ -1,0 +1,56 @@
+@import "./base.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-main;
+}
+
+button,
+nav ul li {
+  cursor: pointer;
+  white-space: nowrap;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+nav ul li {
+  list-style: none;
+}
+
+hr {
+  border: 1px solid $hr-color;
+  border-radius: 2px;
+}
+
+.main-button {
+  background-color: $main-button-color;
+  color: $text-color-dark-1;
+  font-weight: 600;
+  border: none;
+  border-radius: 1.7rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+.icon-button {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  color: $text-color-light;
+  font-weight: 600;
+  border: none;
+}
+
+@media screen and (min-width: 1680px) {
+  html {
+    font-size: 18px;
+  }
+}

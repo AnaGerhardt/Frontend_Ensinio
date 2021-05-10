@@ -1,0 +1,144 @@
+@import "src/assets/css/base.scss";
+
+.intro {
+  width: 100%;
+  z-index: 100;
+  height: 95vh;
+  padding-top: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &-background {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 95vh;
+    padding-top: 10vh;
+    z-index: 0;
+    background: linear-gradient(259.95deg, #5f41d9 2.25%, #41b5d9 100.27%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+    &-details {
+      &-ellipse {
+        position: absolute;
+        width: 35rem;
+        height: 35rem;
+        left: 43rem;
+        top: 12rem;
+        border-radius: 50%;
+
+        background: linear-gradient(
+          110deg,
+          #ffffff -10%,
+          rgba(255, 255, 255, 0) 40%
+        );
+        opacity: 0.09;
+      }
+      #union1 {
+        position: absolute;
+        width: 8rem;
+        height: 9rem;
+        left: 47rem;
+        top: 25rem;
+        transform: rotate(-180deg);
+      }
+      #union2 {
+        position: absolute;
+        width: 8rem;
+        height: 9rem;
+        left: 66rem;
+        top: 17rem;
+        transform: rotate(360deg);
+      }
+      #playlist1 {
+        position: absolute;
+        left: 3.57%;
+        right: 90.7%;
+        top: 4%;
+        bottom: 91.95%;
+      }
+
+      #playlist2 {
+        position: absolute;
+        left: 22.22%;
+        right: 74.03%;
+        top: -5.98%;
+        bottom: 98.02%;
+      }
+
+      #playlist3 {
+        position: absolute;
+        left: 90%;
+        right: 0.81%;
+        top: 4%;
+        bottom: 92.02%;
+      }
+
+      #transcription {
+        position: absolute;
+        left: 73.12%;
+        right: 28.13%;
+        top: 0.77%;
+        bottom: 95.27%;
+
+        transform: rotate(20.07deg);
+      }
+
+      img {
+        position: absolute;
+        left: 41.6%;
+        right: 53.73%;
+        top: 8.26%;
+        bottom: 88.79%;
+      }
+    }
+  }
+  &-texto {
+    padding: 6rem;
+    span {
+      text-transform: uppercase;
+      color: $text-color-light-opacity75;
+      font-family: $font-secondary;
+    }
+    h1 {
+      color: $text-color-light;
+      font-size: 2.75rem;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 110%;
+    }
+    p {
+      line-height: 150%;
+      color: $text-color-light-opacity9;
+      width: 85%;
+    }
+    &-buttons {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+  }
+
+  &-imagem {
+    position: relative;
+    z-index: 30;
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 6rem;
+      width: auto;
+      height: 73vh;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .intro-texto {
+    padding: 3rem 2rem;
+  }
+  .intro-imagem,
+  .intro-background-details {
+    display: none;
+  }
+}

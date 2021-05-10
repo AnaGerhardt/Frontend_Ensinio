@@ -1,0 +1,155 @@
+@import "src/assets/css/base.scss";
+
+.header {
+  z-index: 200;
+  position: absolute;
+  min-height: 13vh;
+  top: 0;
+  width: 100%;
+  align-items: center;
+  font-size: 0.94rem;
+  background: $backdrop-opacity3;
+  backdrop-filter: blur(8px);
+
+  &-hamburger {
+    color: $text-color-light;
+    font-size: 2rem;
+  }
+
+  &-logo {
+    img {
+      width: 9rem;
+      height: 100%;
+    }
+  }
+
+  &-center {
+    color: $text-color-light-opacity9;
+  }
+
+  &-right {
+    color: $text-color-light;
+
+    &-signin {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    &-start {
+      padding: 0.5rem 1rem;
+      border: 1px solid $bright-line;
+      border-radius: 1.5rem;
+    }
+
+    &-languages {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      &-selected {
+        text-transform: uppercase;
+      }
+      &:hover,
+      &:active {
+        + .header-right-languages-hover {
+          opacity: 1;
+          visibility: visible;
+          transition: visibility 200ms linear, opacity 150ms linear;
+        }
+      }
+      &-hover {
+        &:hover {
+          opacity: 1;
+          visibility: visible;
+          transition: visibility 200ms linear, opacity 150ms linear;
+        }
+        border-radius: 0.5rem;
+        background: white;
+        width: 7rem;
+        height: auto;
+        visibility: hidden;
+        transition: visibility 200ms linear, opacity 150ms linear;
+        position: absolute;
+        text-align: left;
+        top: 4rem;
+        right: 2rem;
+
+        ul {
+          padding: 0;
+          color: $text-color-menu-list;
+          & li:hover {
+            background-image: linear-gradient(
+              to right,
+              $text-color-theme-light -600%,
+              white 100%
+            );
+            opacity: 1;
+          }
+          & li:first-child:hover {
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+          }
+          & li:last-child {
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+          }
+
+          li {
+            div {
+              display: flex;
+              gap: 0.5rem;
+              align-items: center;
+              padding: 0.8rem 1rem;
+            }
+
+            span {
+              text-transform: uppercase;
+              font-weight: 500;
+              font-size: 0.9rem;
+            }
+
+            & svg:last-child {
+              position: absolute;
+              right: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-center,
+  &-right {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .header {
+    justify-content: space-between;
+    display: flex;
+    padding: 0 2rem;
+
+    nav {
+      display: none;
+    }
+  }
+  .header-center,
+  .header-right {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $notebook) {
+  .header {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    padding: 0 5rem;
+  }
+  .header-hamburger {
+    display: none;
+  }
+}
