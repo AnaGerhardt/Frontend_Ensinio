@@ -60,6 +60,8 @@ async function request(method: AxiosRequestConfig["method"], url: string) {
   }
 }
 
-export default {
+const methods = {
   get: async (url: string) => request("GET", url),
 };
+
+export default methods;
