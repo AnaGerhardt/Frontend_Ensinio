@@ -16,15 +16,15 @@ export function Intro({ items, language }: IProps) {
       <div className="intro">
         <div className="intro-texto">
           <span>Plataforma all in one</span>
-          <h1>{language && items?.intro.title[language]}</h1>
-          <p>{language && items?.intro.content[language]}</p>
+          <h1>{language && items && items.intro.title[language]}</h1>
+          <p>{language && items && items.intro.content[language]}</p>
           <div className="intro-texto-buttons">
             <button type="button" className="main-button">
-              {language && items?.intro.buttons[language][0]}
+              {language && items && items.intro.buttons[language][0]}
             </button>
             <button type="button" className="icon-button">
               <Video />
-              {language && items?.intro.buttons[language][1]}
+              {language && items && items.intro.buttons[language][1]}
             </button>
           </div>
         </div>

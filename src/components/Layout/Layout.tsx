@@ -53,19 +53,20 @@ export function Layout({ children }: IProps) {
         <div className="header-hamburger">☰</div>
         <nav>
           <ul className="header-center">
-            {items?.nav[selectedLanguage].map((li: string, i) => (
-              <li key={i}>{li}</li>
-            ))}
+            {items &&
+              items.nav[selectedLanguage].map((li: string, i) => (
+                <li key={i}>{li}</li>
+              ))}
           </ul>
         </nav>
         <nav>
           <ul className="header-right">
             <li className="header-right-signin">
               <User />
-              {items?.authentication[selectedLanguage][0]}
+              {items && items.authentication[selectedLanguage][0]}
             </li>
             <li className="header-right-start">
-              {items?.authentication[selectedLanguage][1]}
+              {items && items.authentication[selectedLanguage][1]}
             </li>
             <li className="header-right-languages">
               <span className="header-right-languages-selected">

@@ -17,17 +17,20 @@ export function Resources({ items, language }: IProps) {
       <div className="recursos-top">
         <div className="recursos-top-pensamos">
           <div className="recursos-top-pensamos-line" />
-          <span>{language && items?.resourcesComponent.top[language][0]}</span>
+          <span>
+            {language && items && items.resourcesComponent.top[language][0]}
+          </span>
         </div>
         <span className="recursos-top-conheca">
-          {language && items?.resourcesComponent.top[language][1]} ⚡
+          {language && items && items.resourcesComponent.top[language][1]} ⚡
         </span>
       </div>
       <div className="recursos-content">
-        <h1>{language && items?.resourcesComponent.title[language]}</h1>
+        <h1>{language && items && items.resourcesComponent.title[language]}</h1>
         <div className="recursos-content-recursos">
           {language &&
-            items?.resources?.map((resource, i) => (
+            items &&
+            items.resources.map((resource, i) => (
               <div
                 key={i}
                 data-testid="resources"
@@ -46,12 +49,16 @@ export function Resources({ items, language }: IProps) {
           <div className="recursos-content-footer-veja">
             <Rocket />
             <span>
-              {language && items?.resourcesComponent.footer[language][0]}
+              {language &&
+                items &&
+                items.resourcesComponent.footer[language][0]}
             </span>
           </div>
           <div className="recursos-content-footer-mais">
             <span>
-              {language && items?.resourcesComponent.footer[language][1]}
+              {language &&
+                items &&
+                items.resourcesComponent.footer[language][1]}
             </span>
             <ArrowRight />
           </div>
