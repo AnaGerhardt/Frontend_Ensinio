@@ -18,13 +18,14 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "dev": "react-scripts start",
+    "app": "react-scripts build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "json-server": "json-server --watch db.json --port 5000",
-    "server": "json-server",
-    "start": "concurrently \"npm run dev\" \"npm run server\""
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build && mv -v build/ .. && cd .. && mv build public",
+    "server": "json-server --watch db.json --port 5000",
+    "dev": "concurrently \"npm run dev\" \"npm run server\"",
+    "start": "json-server --watch db.json --port 5000"
   },
   "eslintConfig": {
     "extends": [
