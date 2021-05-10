@@ -1,6 +1,6 @@
 {
   "name": "frontend_ensinio",
-  "homepage": "https://AnaGerhardt.github.io/Frontend_Ensinio",
+  "homepage": "https://anagerhardt.github.io/Frontend_Ensinio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,16 +15,19 @@
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "gh-pages": "^3.1.0"
   },
   "scripts": {
-    "app": "react-scripts build",
+    "start": "react-scripts build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 5000",
-    "dev": "concurrently \"npm run dev\" \"npm run server\"",
-    "start": "npx json-server --watch db.json --port 5000"
+    "serverDev": "json-server --watch db.json --port 5000",
+    "dev": "concurrently \"npm start\" \"npm run serverDev\"",
+    "server": "npx json-server --watch db.json --port 5000",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
